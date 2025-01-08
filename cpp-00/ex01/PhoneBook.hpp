@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xroca-pe <xroca-pe@student.42barcel>       +#+  +:+       +#+        */
+/*   By: xavi <xavi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 17:51:20 by xroca-pe          #+#    #+#             */
-/*   Updated: 2025/01/08 18:34:21 by xroca-pe         ###   ########.fr       */
+/*   Updated: 2025/01/08 22:50:59 by xavi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,10 @@
 
 #include "Contact.hpp"
 #include <iostream>
-#include <iomanip>     //draw table
+#include <iomanip>     //setw(10)
 #include <string>
-#include <limits>
+#include <sstream>     //std::stringstream
+#include <cstdlib>     //exit(0)
 
 #define MAX_CONTACTS 8
 
@@ -33,8 +34,8 @@ class PhoneBook
         ~PhoneBook();
         
         void addContact();
-        void searchContact();
-        void displayContact(int index) const;
+        void searchContacts() const;
+        void printContact(int index) const;
         
     private:
         void printColumn(const std::string &str) const;

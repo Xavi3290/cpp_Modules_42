@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: xroca-pe <xroca-pe@student.42barcel>       +#+  +:+       +#+         #
+#    By: xavi <xavi@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/07 18:26:02 by xroca-pe          #+#    #+#              #
-#    Updated: 2025/01/07 19:02:15 by xroca-pe         ###   ########.fr        #
+#    Updated: 2025/01/10 09:06:33 by xavi             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,5 +34,3 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
-
-

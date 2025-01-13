@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xroca-pe <xroca-pe@student.42barcel>       +#+  +:+       +#+        */
+/*   By: xavi <xavi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 19:32:08 by xroca-pe          #+#    #+#             */
-/*   Updated: 2025/01/07 20:03:37 by xroca-pe         ###   ########.fr       */
+/*   Updated: 2025/01/13 20:16:35 by xavi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,27 +18,27 @@ Contact::~Contact() {}
 
 void Contact::setFirstName(std::string &firstName)
 {
-    _firstName = firstName;
+    this->_firstName = firstName;
 }
 
 void Contact::setLastName(std::string &lastName)
 {
-    _lastName = lastName;
+    this->_lastName = lastName;
 }
 
 void Contact::setNickname(std::string &nickname)
 {
-    _nickname = nickname;
+    this->_nickname = nickname;
 }
 
 void Contact::setPhoneNumber(std::string &phoneNumber)
 {
-    _phoneNumber = phoneNumber;
+    this->_phoneNumber = phoneNumber;
 }
 
 void Contact::setDarkestSecret(std::string &darkestSecret)
 {
-    _darkestSecret = darkestSecret;
+    this->_darkestSecret = darkestSecret;
 }
 
 std::string Contact::getFirstName() const 
@@ -65,4 +65,3 @@ std::string Contact::getDarkestSecret() const
 {
     return this->_darkestSecret;
 }
-

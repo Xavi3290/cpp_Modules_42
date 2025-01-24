@@ -5,16 +5,16 @@
 #                                                     +:+ +:+         +:+      #
 #    By: xavi <xavi@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/01/24 18:24:04 by xavi              #+#    #+#              #
-#    Updated: 2025/01/24 19:42:19 by xavi             ###   ########.fr        #
+#    Created: 2025/01/24 19:42:37 by xavi              #+#    #+#              #
+#    Updated: 2025/01/24 19:43:13 by xavi             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = zombie
+NAME = zombiehorde
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-SRCS = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
+SRCS = main.cpp Zombie.cpp ZombieHorde.cpp
 INCLUDES = Zombie.hpp 
 OBJS = $(SRCS:.cpp=.o)
 
@@ -35,4 +35,3 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
-

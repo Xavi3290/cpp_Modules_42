@@ -6,11 +6,16 @@
 /*   By: xavi <xavi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 18:59:04 by xavi              #+#    #+#             */
-/*   Updated: 2025/01/24 19:57:58 by xavi             ###   ########.fr       */
+/*   Updated: 2025/01/24 20:00:25 by xavi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
+
+Zombie::Zombie() {
+    this->_name = "Default";
+    std::cout << "Zombie " << this->_name << " is created." << std::endl;
+}
 
 Zombie::Zombie(std::string name) : _name(name) {
     this->_name = name;
@@ -23,4 +28,8 @@ Zombie::~Zombie() {
 
 void Zombie::announce(void) {
     std::cout << this->_name << " BraiiiiiiinnnzzzZ..." << std::endl;
+}
+
+void Zombie::setName(std::string name) {
+    this->_name = name;
 }

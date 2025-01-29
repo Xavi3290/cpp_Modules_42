@@ -5,16 +5,17 @@
 #                                                     +:+ +:+         +:+      #
 #    By: xavi <xavi@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/01/26 19:49:54 by xavi              #+#    #+#              #
-#    Updated: 2025/01/26 20:28:42 by xavi             ###   ########.fr        #
+#    Created: 2025/01/26 20:18:47 by xavi              #+#    #+#              #
+#    Updated: 2025/01/26 20:36:23 by xavi             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = references
+NAME = unnecesary_violence
 
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
-SRCS = main.cpp  
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic -fsanitize=address
+SRCS = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+INCLUDES = Weapon.hpp HumanA.hpp HumanB.hpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
@@ -22,7 +23,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
-%.o: %.cpp
+%.o: %.cpp $(INCLUDES)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:

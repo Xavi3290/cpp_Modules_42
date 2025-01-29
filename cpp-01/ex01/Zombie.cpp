@@ -6,7 +6,7 @@
 /*   By: xavi <xavi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 18:59:04 by xavi              #+#    #+#             */
-/*   Updated: 2025/01/24 20:00:25 by xavi             ###   ########.fr       */
+/*   Updated: 2025/01/29 19:53:30 by xavi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ Zombie::Zombie() {
 }
 
 Zombie::Zombie(std::string name) : _name(name) {
-    this->_name = name;
     std::cout << "Zombie " << this->_name << " is created." << std::endl;
 }
 

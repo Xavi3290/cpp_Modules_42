@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xavi <xavi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/24 19:14:32 by xavi              #+#    #+#             */
-/*   Updated: 2025/01/26 20:27:52 by xavi             ###   ########.fr       */
+/*   Created: 2025/01/26 20:39:23 by xavi              #+#    #+#             */
+/*   Updated: 2025/01/29 20:17:31 by xavi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef HUMANA_HPP
+#define HUMANA_HPP
 
-int main(void) {
-    Zombie *zombie;
-    
-    zombie = Zombie::newZombie("Paco");
-    zombie->announce();
-    delete zombie;
-    std::cout << std::endl;
-    Zombie::randomChump("Pepe");
-    std::cout << std::endl;
-    zombie = Zombie::newZombie("Juan");
-    zombie->announce();
-    Zombie::randomChump("Luis");
-    zombie->announce();
-    delete zombie;
-    
-    return 0;
-}
+#include "Weapon.hpp"
+#include <string>
+#include <iostream>
+
+class HumanA {
+    private:
+        std::string _name;
+        Weapon &_weapon;
+
+    public:
+        HumanA(const std::string &name, Weapon &weapon);
+        ~HumanA();
+
+        void attack() const;
+};
+
+#endif

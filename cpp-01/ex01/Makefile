@@ -6,14 +6,14 @@
 #    By: xavi <xavi@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/24 19:42:37 by xavi              #+#    #+#              #
-#    Updated: 2025/01/24 19:43:13 by xavi             ###   ########.fr        #
+#    Updated: 2025/01/26 20:25:44 by xavi             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = zombiehorde
 
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic -fsanitize=address
 SRCS = main.cpp Zombie.cpp ZombieHorde.cpp
 INCLUDES = Zombie.hpp 
 OBJS = $(SRCS:.cpp=.o)

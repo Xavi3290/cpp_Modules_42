@@ -6,7 +6,7 @@
 /*   By: xavi <xavi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 19:49:17 by xavi              #+#    #+#             */
-/*   Updated: 2025/02/03 20:02:03 by xavi             ###   ########.fr       */
+/*   Updated: 2025/02/03 20:16:24 by xavi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ Fixed::~Fixed() {
 }
 
 int Fixed::getRawBits(void) const {
-    //std::cout << "getRawBits member function called" << std::endl;
     return this->_value;
 }
 

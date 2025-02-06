@@ -5,17 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: xroca-pe <xroca-pe@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/02/03 19:00:06 by xavi              #+#    #+#              #
-#    Updated: 2025/02/06 18:09:53 by xroca-pe         ###   ########.fr        #
+#    Created: 2025/02/06 18:02:41 by xroca-pe          #+#    #+#              #
+#    Updated: 2025/02/06 18:02:48 by xroca-pe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = myFirstClassOCF
+
+NAME = clapTrap
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic -fsanitize=address
-SRCS = main.cpp Fixed.cpp 
-INCLUDES = Fixed.hpp 
+SRCS = main.cpp ClapTrap.cpp 
+INCLUDES = ClapTrap.hpp 
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)

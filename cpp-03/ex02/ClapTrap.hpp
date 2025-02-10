@@ -1,32 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xroca-pe <xroca-pe@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/10 17:01:53 by xroca-pe          #+#    #+#             */
-/*   Updated: 2025/02/10 18:36:32 by xroca-pe         ###   ########.fr       */
+/*   Created: 2025/02/06 18:17:23 by xroca-pe          #+#    #+#             */
+/*   Updated: 2025/02/10 17:31:35 by xroca-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-#define SCAVTRAP_HPP
+#ifndef CLAPTRAP_HPP
+#define CLAPTRAP_HPP
 
-#include "ClapTrap.hpp"
 #include <iostream>
 #include <string>
 
-class ScavTrap : public ClapTrap {
+class ClapTrap {
+    protected:
+        std::string _name;
+        int _hitPoints;
+        int _energyPoints;
+        int _attackDamage;
+
     public:
-        ScavTrap();
-        ScavTrap(const std::string name);
-        ScavTrap(const ScavTrap &scavTrap);
-        ScavTrap &operator=(const ScavTrap &scavTrap);
-        ~ScavTrap();
+        ClapTrap();
+        ClapTrap(const std::string name);
+        ClapTrap(const ClapTrap &clapTrap);
+        ClapTrap &operator=(const ClapTrap &clapTrap);
+        ~ClapTrap();
 
         void attack(const std::string &target);
-        void guardGate();
-};
+        void takeDamage(unsigned int amount);
+        void beRepaired(unsigned int amount);
+}; 
 
 #endif

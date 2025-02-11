@@ -6,7 +6,7 @@
 /*   By: xroca-pe <xroca-pe@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 20:46:15 by xroca-pe          #+#    #+#             */
-/*   Updated: 2025/02/10 20:48:24 by xroca-pe         ###   ########.fr       */
+/*   Updated: 2025/02/11 09:09:18 by xroca-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class WrongAnimal {
         WrongAnimal &operator=(const WrongAnimal &wrongAnimal);
         virtual ~WrongAnimal();
 
-        virtual void makeSound() const;
+        void makeSound() const;
         std::string getType() const;
 };
 

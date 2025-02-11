@@ -6,13 +6,13 @@
 /*   By: xroca-pe <xroca-pe@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 20:53:13 by xroca-pe          #+#    #+#             */
-/*   Updated: 2025/02/10 21:00:03 by xroca-pe         ###   ########.fr       */
+/*   Updated: 2025/02/11 08:49:55 by xroca-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongCat.hpp"
 
-WrongCat::WrongCat() {
+WrongCat::WrongCat() : WrongAnimal() {
     _type = "WrongCat";
     std::cout << "WrongCat created. (Default)" << std::endl;
 }

@@ -6,13 +6,13 @@
 /*   By: xroca-pe <xroca-pe@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 20:26:39 by xroca-pe          #+#    #+#             */
-/*   Updated: 2025/02/10 20:33:01 by xroca-pe         ###   ########.fr       */
+/*   Updated: 2025/02/11 08:49:00 by xroca-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog() {
+Dog::Dog() : Animal() {
     _type = "Dog";
     std::cout << "Dog created. (Default)" << std::endl;
 }

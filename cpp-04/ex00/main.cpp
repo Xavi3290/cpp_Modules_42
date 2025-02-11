@@ -6,7 +6,7 @@
 /*   By: xroca-pe <xroca-pe@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 20:03:52 by xroca-pe          #+#    #+#             */
-/*   Updated: 2025/02/10 21:09:10 by xroca-pe         ###   ########.fr       */
+/*   Updated: 2025/02/11 08:45:41 by xroca-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,13 @@ int main() {
     std::cout << "Type of dog: " << dog->getType() << std::endl;
     std::cout << "Type of cat: " << cat->getType() << std::endl;
 
+
     std::cout << std::endl;
     
     genericAnimal->makeSound();
     dog->makeSound();
     cat->makeSound();
+   
 
     std::cout << std::endl;
 
@@ -54,6 +56,22 @@ int main() {
 
     delete wrongAnimal;
     delete wrongCat;
+
+    std::cout << std::endl;
+
+    Animal genericAnimal2;
+    Dog dog2;
+    Cat cat2;
+
+    std::cout << "Type of genericAnimal: " << genericAnimal2.getType() << std::endl;
+    std::cout << "Type of dog: " << dog2.getType() << std::endl;
+    std::cout << "Type of cat: " << cat2.getType() << std::endl;
     
+    genericAnimal2.makeSound();
+    dog2.makeSound();
+    cat2.makeSound();
+
+    std::cout << std::endl;
+
     return 0;
 }

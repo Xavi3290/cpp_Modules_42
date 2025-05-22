@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: xroca-pe <xroca-pe@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/22 19:28:34 by xroca-pe          #+#    #+#             */
-/*   Updated: 2025/05/22 21:33:13 by xroca-pe         ###   ########.fr       */
+/*   Created: 2025/05/22 20:05:16 by xroca-pe          #+#    #+#             */
+/*   Updated: 2025/05/22 21:30:31 by xroca-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,39 +14,44 @@
 
 int main() {
     try {
-        Bureaucrat alice("Alice", 1);
-        std::cout << alice << std::endl;
-        alice.incrementGrade();
+        Form badFormLowSign("BadFormLow", 0, 50);
     }
     catch (const std::exception &e) {
         std::cerr << "Exception: " << e.what() << std::endl;
     }
 
     try {
-        Bureaucrat bDefault;
-        std::cout << bDefault << std::endl;
-        bDefault.decrementGrade();
+        Form badFormHighSign("BadFormHigh", 151, 50);
     }
     catch (const std::exception &e) {
         std::cerr << "Exception: " << e.what() << std::endl;
     }
 
     try {
-        Bureaucrat bob("Bob", 6);
-        std::cout << bob << std::endl;
-        bob.decrementGrade();
-        std::cout << "After decrement " << bob << std::endl;
+        Form badFormLowExec("BadFormLow", 50, 0);
     }
     catch (const std::exception &e) {
         std::cerr << "Exception: " << e.what() << std::endl;
     }
 
     try {
-        Bureaucrat pep("Pep", 200);
+        Form badFormHighExec("BadFormHigh", 50, 151);
     }
     catch (const std::exception &e) {
         std::cerr << "Exception: " << e.what() << std::endl;
     }
 
+    Form formA("FormA", 50, 50);
+    std::cout << formA << std::endl;
+
+    Bureaucrat pep("Pep", 50);
+    Bureaucrat bob("Bob", 100);
+
+    pep.signForm(formA);
+    std::cout << formA << std::endl;
+    bob.signForm(formA);
+    std::cout << formA << std::endl;
+    pep.signForm(formA);
+     
     return 0;
 }

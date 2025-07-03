@@ -6,7 +6,7 @@
 /*   By: xroca-pe <xroca-pe@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 12:44:43 by xroca-pe          #+#    #+#             */
-/*   Updated: 2025/07/03 15:20:43 by xroca-pe         ###   ########.fr       */
+/*   Updated: 2025/07/03 15:57:17 by xroca-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,11 @@ class Span {
 
         template <typename T>
         void addNumbers(T begin, T end) {
-            for (;begin != end; begin++)
-                addNumber(*begin);
+            unsigned int rangSize = static_cast<unsigned int>(std::distance(begin, end));
+            if (_numbers.size() + rangSize > _maxSize) {
+                throw std::length_error("Span is full, cannot add more numbers.");
+            }
+            _numbers.insert(_numbers.end(), begin, end);
         }
 };
 

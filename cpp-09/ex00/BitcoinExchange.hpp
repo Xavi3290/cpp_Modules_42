@@ -6,7 +6,7 @@
 /*   By: xroca-pe <xroca-pe@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/11 17:22:05 by xroca-pe          #+#    #+#             */
-/*   Updated: 2025/07/11 17:22:07 by xroca-pe         ###   ########.fr       */
+/*   Updated: 2025/07/14 15:10:36 by xroca-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,13 @@
 #include <stdexcept>
 
 class BitcoinExchange {
+    private:
+        std::map<std::string, double> _data;
+
+        double findRate(const std::string &date) const;
+        void validateDate(const std::string &date) const;
+        double parseValue(const std::string &value) const;
+        
     public:
         BitcoinExchange();
         BitcoinExchange(const BitcoinExchange &other);
@@ -30,12 +37,6 @@ class BitcoinExchange {
         void loadDatabase(const std::string  &dbFile);
         void processInput(const std::string &inputFile) const;
 
-    private:
-        std::map<std::string, double> _data;
-
-        double findRate(const std::string &date) const;
-        void validateDate(const std::string &date) const;
-        double parseValue(const std::string &value) const;
 };
 
 #endif

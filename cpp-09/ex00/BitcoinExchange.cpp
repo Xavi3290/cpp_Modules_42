@@ -6,12 +6,13 @@
 /*   By: xroca-pe <xroca-pe@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/11 17:25:09 by xroca-pe          #+#    #+#             */
-/*   Updated: 2025/07/14 13:02:34 by xroca-pe         ###   ########.fr       */
+/*   Updated: 2025/09/11 12:15:42 by xroca-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "BitcoinExchange.hpp"
 #include <sstream>
+#include <ctime>
 
 static std::string trim(const std::string &str) {
     size_t start = str.find_first_not_of(" \t\n\r");
@@ -101,17 +102,36 @@ void BitcoinExchange::processInput(const std::string &inputFile) const {
 }
 
 void BitcoinExchange::validateDate(const std::string &date) const {
-    if (date.size() != 10 || date[4] != '-' || date[7] != '-') {
-        throw std::invalid_argument("Invalid date format: " + date);
-    }
+    if (date.size() != 10 || date[4] != '-' || date[7] != '-')
+        throw std::invalid_argument(date);
+
     int y, m, d;
-    std::stringstream ss(date);
     char dash1, dash2;
-    if (!(ss >> y >> dash1 >> m >> dash2 >> d) || dash1 != '-' || dash2 != '-' || !ss.eof()) {
-        throw std::invalid_argument("Invalid date format: " + date);
+    std::istringstream ss(date);
+    if (!(ss >> y >> dash1 >> m >> dash2 >> d) ||
+        dash1 != '-' || dash2 != '-' || !ss.eof())
+    {
+        throw std::invalid_argument(date);
     }
-    if (m < 1 || m > 12 || d < 1 || d > 31) {
-        throw std::invalid_argument("Invalid date value: " + date);
+
+    if (m < 1 || m > 12 || d < 1 || d > 31)
+        throw std::invalid_argument(date);
+
+    std::tm tmv;
+    tmv.tm_year = y - 1900;
+    tmv.tm_mon  = m - 1;
+    tmv.tm_mday = d;
+    tmv.tm_hour = 0;
+    tmv.tm_min  = 0;
+    tmv.tm_sec  = 0;
+    tmv.tm_isdst = -1;
+
+    if (std::mktime(&tmv) == -1 ||
+        tmv.tm_year != y - 1900 ||
+        tmv.tm_mon  != m - 1   ||
+        tmv.tm_mday != d)
+    {
+        throw std::invalid_argument(date);
     }
 }
 

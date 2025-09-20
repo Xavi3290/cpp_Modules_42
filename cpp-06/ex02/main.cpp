@@ -6,7 +6,7 @@
 /*   By: xroca-pe <xroca-pe@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 20:18:44 by xroca-pe          #+#    #+#             */
-/*   Updated: 2025/06/02 20:58:11 by xroca-pe         ###   ########.fr       */
+/*   Updated: 2025/09/20 12:43:08 by xroca-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,21 +40,24 @@ void identify(Base *p) {
 
 void identify(Base &p) {
     try {
-        dynamic_cast<A&>(p);
+        A &a = dynamic_cast<A&>(p);
+        (void)a;
         std::cout << "A" << std::endl;
     }
     catch (std::exception &e) {
         //std::cerr << "Not A" << std::endl;
     }
     try {
-        dynamic_cast<B&>(p);
+        B &b = dynamic_cast<B&>(p);
+        (void)b;
         std::cout << "B" << std::endl;
     }
     catch (std::exception &e) {
         //std::cerr << "Not B" << std::endl;
     }
     try {
-        dynamic_cast<C&>(p);
+        C &c = dynamic_cast<C&>(p);
+        (void)c;
         std::cout << "C" << std::endl;
     }
     catch (std::exception &e) {

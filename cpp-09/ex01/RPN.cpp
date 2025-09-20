@@ -6,7 +6,7 @@
 /*   By: xroca-pe <xroca-pe@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/14 14:52:54 by xroca-pe          #+#    #+#             */
-/*   Updated: 2025/07/14 16:30:34 by xroca-pe         ###   ########.fr       */
+/*   Updated: 2025/09/20 15:15:19 by xroca-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,3 +75,4 @@ void RPN::evaluate(const std::string &expression) const {
     }
     std::cout << stack.top() << std::endl;
 }
+

@@ -6,7 +6,7 @@
 /*   By: xroca-pe <xroca-pe@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/01 20:19:17 by xroca-pe          #+#    #+#             */
-/*   Updated: 2025/07/01 20:19:25 by xroca-pe         ###   ########.fr       */
+/*   Updated: 2025/09/20 15:09:16 by xroca-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,4 @@ typename T::iterator easyfind(T &container, int value) {
 }
 
 #endif
+

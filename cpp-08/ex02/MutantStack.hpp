@@ -6,7 +6,7 @@
 /*   By: xroca-pe <xroca-pe@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 16:06:21 by xroca-pe          #+#    #+#             */
-/*   Updated: 2025/07/03 16:18:27 by xroca-pe         ###   ########.fr       */
+/*   Updated: 2025/09/20 15:11:27 by xroca-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,3 +46,4 @@ class MutantStack : public std::stack<T> {
 };
 
 #endif
+

@@ -6,7 +6,7 @@
 /*   By: xroca-pe <xroca-pe@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/30 19:17:58 by xroca-pe          #+#    #+#             */
-/*   Updated: 2025/06/30 20:32:03 by xroca-pe         ###   ########.fr       */
+/*   Updated: 2025/09/20 15:07:23 by xroca-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,3 +98,4 @@ const char *Array<T>::OutOfBoundsException::what() const throw() {
 }
 
 #endif
+

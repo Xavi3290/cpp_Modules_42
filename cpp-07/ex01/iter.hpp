@@ -6,7 +6,7 @@
 /*   By: xroca-pe <xroca-pe@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/30 18:20:13 by xroca-pe          #+#    #+#             */
-/*   Updated: 2025/06/30 18:28:25 by xroca-pe         ###   ########.fr       */
+/*   Updated: 2025/09/20 15:06:17 by xroca-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,3 +20,4 @@ void iter(T *array, unsigned int length, void (*f)(T const &)) {
 }
 
 #endif
+

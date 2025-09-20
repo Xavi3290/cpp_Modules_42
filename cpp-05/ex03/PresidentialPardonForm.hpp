@@ -6,7 +6,7 @@
 /*   By: xroca-pe <xroca-pe@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 18:57:25 by xroca-pe          #+#    #+#             */
-/*   Updated: 2025/05/26 20:11:17 by xroca-pe         ###   ########.fr       */
+/*   Updated: 2025/09/20 12:07:16 by xroca-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,4 @@ class PresidentialPardonForm : public AForm {
 };
 
 #endif
+

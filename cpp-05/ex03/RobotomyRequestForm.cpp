@@ -6,7 +6,7 @@
 /*   By: xroca-pe <xroca-pe@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 18:56:50 by xroca-pe          #+#    #+#             */
-/*   Updated: 2025/05/26 20:09:15 by xroca-pe         ###   ########.fr       */
+/*   Updated: 2025/09/20 12:06:59 by xroca-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,4 @@ void RobotomyRequestForm::execute(Bureaucrat const &executor) const {
         std::cout << "Robotomy failed for " << _target << "!" << std::endl;
     }
 }
+
